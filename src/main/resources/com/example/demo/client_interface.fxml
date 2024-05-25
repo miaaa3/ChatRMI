@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="311.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ClientController">
+    <children>
+        <!-- Welcome message -->
+        <Label fx:id="welcomeLabel" layoutX="258.0" layoutY="18.0" text="Welcome, User!" />
+
+        <!-- List of groups on the left -->
+        <Label layoutX="28.0" layoutY="18.0" text="List of groups" />
+        <ListView fx:id="groupListView" layoutX="-2.0" layoutY="40.0" prefHeight="200.0" prefWidth="133.0" />
+
+        <!-- Chat area in the center -->
+        <ListView fx:id="chatListView" layoutX="141.0" layoutY="40.0" prefHeight="200.0" prefWidth="316.0" />
+
+        <!-- Input field and send button at the bottom -->
+        <TextField fx:id="messageField" layoutX="160.0" layoutY="256.0" prefHeight="25.0" prefWidth="236.0" />
+        <Button layoutX="408.0" layoutY="255.0" onAction="#sendMessage" text="Send" />
+
+        <!-- List of all members on the right -->
+        <Label layoutX="502.0" layoutY="18.0" text="List of members" />
+        <ListView fx:id="groupMembersListView" layoutX="466.0" layoutY="40.0" onMouseClicked="#updateGroupMembersList" prefHeight="200.0" prefWidth="168.0" />
+        <Button layoutX="496.0" layoutY="255.0" onAction="#createGroup" text="Create New Group" />
+        <Button layoutX="15.0" layoutY="243.0" onAction="#joinGroup" prefHeight="25.0" prefWidth="99.0" text="Join Group" />
+        <Button layoutX="15.0" layoutY="273.0" onAction="#leaveGroup" prefHeight="25.0" prefWidth="99.0" text="Leave Group" />
+
+        <!-- Button to send media -->
+        <Button layoutX="238.0" layoutY="284.0" onAction="#sendMedia" text="Send Media" />
+    </children>
+    <opaqueInsets>
+        <Insets top="10.0" />
+    </opaqueInsets>
+</AnchorPane>

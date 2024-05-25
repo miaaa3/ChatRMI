@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="199.0" prefWidth="288.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.CreateGroupDialogController">
+    <TextField fx:id="groupNameField" prefHeight="27.0" prefWidth="247.0" promptText="Group Name" />
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="502.0" layoutY="18.0" prefHeight="17.0" prefWidth="300.0" text="List of members" textAlignment="CENTER" />
+    <ListView fx:id="membersListView" prefHeight="127.0" prefWidth="40.0">
+      <opaqueInsets>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </opaqueInsets></ListView>
+    <Button alignment="CENTER" onAction="#saveGroup" prefHeight="25.0" prefWidth="339.0" text="Save" />
+</VBox>
